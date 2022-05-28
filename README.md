@@ -14,9 +14,9 @@
 #### Guest
 - - -
 ```
-  - `/`
-  - `/name="name"`
-  - `/info`
+  - /
+  - /name="name"
+  - /info
 ```
 
 #### Auth
