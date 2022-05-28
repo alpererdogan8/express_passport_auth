@@ -1,6 +1,3 @@
-# express_auth
-Basic session control
-=======
 ## A simple authentication application for Express
 
 ### Install 
@@ -37,4 +34,4 @@ Basic session control
 ### TO-DO 📝
 - [x] Local Auth
 - [ ] Google Auth
->>>>>>> d489192 (README Updated)
+
