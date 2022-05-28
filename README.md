@@ -16,7 +16,7 @@
 ```
   - `/`
   - `/name="name"`
-  + `/info`
+  - `/info`
 ```
 
 #### Auth
