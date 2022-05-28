@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const userService = require("../services/userService");
 const passportConfig = require("../config/passportConfig");
+const bcrypt = require("bcrypt");
+const User = require("../models/user");
 
 router.use(passportConfig.initialize());
 router.use(passportConfig.session());
@@ -33,6 +35,12 @@ router.get("/private/:user", isAuth, async (req, res) => {
 });
 router.get("/error", (req, res) => {
   res.send("Wrong Login");
+});
+
+router.post("/register", async (req, res) => {
+  const { username, password } = req.body;
+  const userFeedback = await userService.registerUser(username, password);
+  res.send(userFeedback);
 });
 
 router.post(
