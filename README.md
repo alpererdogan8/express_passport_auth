@@ -11,7 +11,7 @@
 
 `URL = http://localhost:9000/api/v1/auth/`
 
-#### Guest
+#### /Guest
 - - -
 ```
   - /
@@ -19,7 +19,7 @@
   - /info
 ```
 
-#### Auth
+#### /Auth
 - - -
   ``` 
    /
