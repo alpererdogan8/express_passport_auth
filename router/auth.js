@@ -1,8 +1,7 @@
 const router = require("express").Router();
 const userService = require("../services/userService");
 const passportConfig = require("../config/passportConfig");
-const bcrypt = require("bcrypt");
-const User = require("../models/user");
+
 
 router.use(passportConfig.initialize());
 router.use(passportConfig.session());
@@ -17,8 +16,8 @@ router.get("/", isAuth, (req, res) => {
 });
 
 router.get("/user", isAuth, async (req, res) => {
-  const result = await userService.findUser("admin");
-  res.send(result);
+  const { username } = req.session.passport.user;
+  res.send(`Welcome ${username}`);
 });
 
 router.get("/private", isAuth, (req, res) => {
