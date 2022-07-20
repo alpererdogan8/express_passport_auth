@@ -9,13 +9,6 @@ const { auth, guest } = require("./router");
 const URL = 9000 ;
 
 
-app.use(
-  session({
-    secret: "SESSION_SECRET",
-    resave: false,
-    saveUninitialized: true,
-  })
-);
 app.use(logger("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
